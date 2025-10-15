@@ -27,6 +27,10 @@ class MainPage(BasePage):
     def open_bun_details(self):
         self.click_on_element(MainPageLocators.BUN)
 
+    @allure.step('Поиск элемента в окне с информацией об ингредиенте')
+    def find_information_ingredient(self):
+        self.find_element(MainPageLocators.ING_DETAILS)
+
     @allure.step('Клик по кнопке "Личный кабинет"')
     def click_button_auth(self):
         self.click_on_element(MainPageLocators.AUTH_BUTTON)
@@ -57,3 +61,15 @@ class MainPage(BasePage):
     @allure.step('Клик по кнопке "Оформить заказ"')
     def click_on_button_order(self):
         self.click_on_element(MainPageLocators.BUTTON_CREATE_ORDER)
+
+    @allure.step('Раздел со сбором бургера')
+    def burger_construct(self):
+        self.find_element(MainPageLocators.BURGER_CONSTRUCT)
+
+    @allure.step("Получить номер заказа")
+    def get_number_order(self):
+        self.drag_bun_in_constructor()
+        self.click_on_button_order()
+        number = self.find_element(MainPageLocators.NUMBER_ORDER)
+        return int(number.text)
+

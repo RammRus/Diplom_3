@@ -12,3 +12,4 @@ class MainPageLocators:
     AUTH_BUTTON = (By.XPATH, "//a[text()='Личный кабинет']") #Кнопка Личный кабинет
     MAIN_HEADER = (By.XPATH, "/main[@class, 'App_componentContainer__2JC2W']") #Кнопка "Stellar Burger", которая ведет на главную страницу "Конструктор"
     BUTTON_CREATE_ORDER = (By.XPATH, "//div[text()='Оформить заказ']") #Кнопка "Оформить заказ"
+    NUMBER_ORDER = (By.CLASS_NAME, 'Modal_modal__title_shadow__3ikwq Modal_modal__title__2L34m text text_type_digits-large mb-8')

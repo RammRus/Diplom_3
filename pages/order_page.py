@@ -25,3 +25,7 @@ class OrderPage(BasePage):
     def get_today_order_count(self):
         elem = self.find_element(OrderPageLocators.COUNTER_TODAY)
         return int(elem.text)
+    
+    @allure.step("Получить заказ из раздела 'В работе'")
+    def get_order_in_work(self):
+        
