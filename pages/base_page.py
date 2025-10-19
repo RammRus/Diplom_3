@@ -20,3 +20,7 @@ class BasePage:
     @allure.step('Поиск элемента')
     def find_element(self, *locator):
         return self.driver.find_element(*locator)
+    
+    @allure.step('Получение текста элемента')
+    def get_element_text(self, *locator):
+        return self.wait_for_element(*locator).text

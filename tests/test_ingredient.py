@@ -10,7 +10,8 @@ class TestIngredient:
 
         with allure.step('Проверка, что при клике на ингредиент, всплывает окно с информацией об ингредиенте'):
             main_page.open_bun_details()
-            assert main_page.find_information_ingredient()
+            title = main_page.get_element_text()
+            assert title
 
 
     def test_closed_inform_about_ingredient(self, driver):

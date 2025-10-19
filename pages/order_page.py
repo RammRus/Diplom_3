@@ -28,4 +28,5 @@ class OrderPage(BasePage):
     
     @allure.step("Получить заказ из раздела 'В работе'")
     def get_order_in_work(self):
-        
+        order = OrderPageLocators.AT_WORK
+        return self.wait_visibility_of_element(order)

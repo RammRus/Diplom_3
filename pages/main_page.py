@@ -27,9 +27,9 @@ class MainPage(BasePage):
     def open_bun_details(self):
         self.click_on_element(MainPageLocators.BUN)
 
-    @allure.step('Поиск элемента в окне с информацией об ингредиенте')
-    def find_information_ingredient(self):
-        self.find_element(MainPageLocators.ING_DETAILS)
+    @allure.step('Получение заголовка окна с информацией об ингредиенте')
+    def get_information_ingredient(self):
+        self.get_element_text(MainPageLocators.ING_DETAILS)
 
     @allure.step('Клик по кнопке "Личный кабинет"')
     def click_button_auth(self):
